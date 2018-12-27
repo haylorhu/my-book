@@ -1,0 +1,71 @@
+.baseCard {
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #54d1e3;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}
+.container .info {
+  background-color: #fb9fc6;
+  padding: 100rpx 0;
+  display: flex;
+  margin: 0 20rpx;
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #54d1e3;
+  margin: 20rpx;
+  border-radius: 5rpx;
+  background: #fb9fc6;
+}
+.container .info button {
+  display: flex;
+  background-color: #fb9fc6;
+  border: 10rpx solde #fb9fc6;
+  outline: #fb9fc6;
+}
+.container .info .nickName {
+  display: inline;
+  color: white;
+}
+.container .info .loginAvatar {
+  height: 100rpx;
+  width: 100rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+}
+.container .card {
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #54d1e3;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}
+.container .addBook {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #54d1e3;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}
+.container .addBook .scan {
+  margin: 50rpx 0rpx;
+  color: white;
+}
+.container .addBook .input {
+  background-color: #54d1e3;
+  border-bottom: 1px solid white;
+  color: white;
+  max-width: 400rpx;
+  margin-bottom: 50rpx;
+}
+.container .addBook .addByInput {
+  color: #fb9fc6;
+  margin-bottom: 50rpx;
+}
+.container .addBook .place {
+  color: red;
+}

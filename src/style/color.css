@@ -1,0 +1,7 @@
+.baseCard {
+  min-width: 20rpx;
+  min-height: 20rpx;
+  background: #54d1e3;
+  margin: 20rpx;
+  border-radius: 5rpx;
+}

@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/book/main",
+    "pages/commint/main",
+    "pages/my/main",
+    "pages/bookdetail/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"black",
+    "list": [
+      {
+        "pagePath": "pages/book/main",
+        "text": "书记"
+      },
+      {
+        "pagePath": "pages/commint/main",
+        "text": "评论"
+      },
+      {
+        "pagePath": "pages/my/main",
+        "text": "我的"
+      }
+    ]
+  }
+}

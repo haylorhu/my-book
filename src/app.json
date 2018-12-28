@@ -3,28 +3,37 @@
     "pages/book/main",
     "pages/commint/main",
     "pages/my/main",
-    "pages/bookdetail/main"
+    "pages/bookdetail/main",
+    "pages/addcommint/main"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "black",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "selectedColor":"black",
+    "selectedColor": "#EA5149",
     "list": [
       {
         "pagePath": "pages/book/main",
-        "text": "书记"
+        "text": "书籍",
+        "iconPath":"/static/img/bookD.png",
+        "selectedIconPath":"/static/img/book.png"
       },
       {
         "pagePath": "pages/commint/main",
-        "text": "评论"
+        "text": "评论",
+        "iconPath":"/static/img/commentD.png",
+        "selectedIconPath":"/static/img/comment.png"
+
       },
       {
         "pagePath": "pages/my/main",
-        "text": "我的"
+        "text": "我的",
+        "iconPath":"/static/img/myD.png",
+        "selectedIconPath":"/static/img/my.png"
+
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
 	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": false,
 		"postcss": true,
 		"minified": true,
@@ -30,7 +30,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -42,6 +42,18 @@
 					"id": 1,
 					"name": "detail",
 					"pathName": "pages/bookdetail/main",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "commint",
+					"pathName": "pages/addcommint/main",
+					"query": "id=1"
+				},
+				{
+					"id": -1,
+					"name": "commint",
+					"pathName": "pages/commint/main",
 					"query": ""
 				}
 			]

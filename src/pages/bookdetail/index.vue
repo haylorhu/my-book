@@ -13,7 +13,13 @@
     <div class="introduce">
       <p class="intro">书籍简介</p>
       <p class="introduceText">{{bookInfo.summary}}</p>
+      <p>最新评论</p>
+
+      <p class="commitItem" v-for="(comment, index) in comments" :key="index">{{comment.comment}}</p>
     </div>
+    <a :href="comintUrl">
+      <div class="commit">评论</div>
+    </a>
   </div>
 </template>
   <script>
@@ -26,18 +32,25 @@ export default {
   data() {
     return {
       bookInfo: {},
-      color: ""
+      color: "",
+      comments: []
     };
+  },
+  onPullDownRefresh() {
+    this.getDetail(), this.getCommit();
   },
   methods: {
     async getDetail() {
       let bookid = this.$root.$mp.query.id;
       this.color = this.$root.$mp.query.color.slice(11);
-      console.log(bookid);
+
       const info = await get("/weapp/bookId", { id: bookid });
       this.bookInfo = info.data.list[0];
-      console.log(this.bookInfo);
-      console.log(this.color);
+    },
+    async getCommit() {
+      let bookid = this.$root.$mp.query.id;
+      const info = await get("/weapp/getCommitbyBookId", { bookid: bookid });
+      this.comments = info.data.comment;
     }
   },
   computed: {
@@ -45,15 +58,21 @@ export default {
       return `background: linear-gradient(180deg,${this.color} 0, ${
         this.color
       } 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%)`;
+    },
+    comintUrl() {
+      return "/pages/addcommint/main?id=" + this.bookInfo.id;
     }
   },
   mounted() {
     this.getDetail();
+    console.log(12312321321);
+    this.getCommit();
   },
   created() {}
 };
 </script>
   <style scoped lang='less'>
+@import "../../style/color.less";
 .containerWiper {
   display: flex;
   flex-direction: column;
@@ -70,7 +89,7 @@ export default {
   }
   .detailImage {
     height: 550rpx;
-    width:392rpx;
+    width: 392rpx;
 
     z-index: 2;
     position: relative;
@@ -97,7 +116,7 @@ export default {
     }
 
     .title {
-      margin: 20rpx 0  0 0;
+      margin: 20rpx 0 0 0;
       display: inline;
     }
     .auth {
@@ -106,17 +125,34 @@ export default {
       color: rgb(138, 138, 138);
       font-size: 0.85em;
     }
-
-  }   
-  .introduce{
+  }
+  .introduce {
     margin: 0 20rpx;
   }
-  .intro{
-      margin:50rpx 0 20rpx 0 ;
-
-    }
-    .introduceText{
-      color: rgb(85, 85, 85);
-    }
+  .intro {
+    margin: 50rpx 0 20rpx 0;
+  }
+  .introduceText {
+    color: rgb(85, 85, 85);
+  }
+  .commit {
+    position: fixed;
+    bottom: 20rpx;
+    background: darksalmon;
+    right: 20rpx;
+    border-radius: 50%;
+    height: 100rpx;
+    width: 100rpx;
+    text-align: center;
+    height: 100rpx;
+    vertical-align: middle;
+    line-height: 100rpx;
+    color: white;
+  }
+}
+.commitItem {
+  .baseCard();
+  padding: 5rpx;
+  color: white;
 }
 </style>

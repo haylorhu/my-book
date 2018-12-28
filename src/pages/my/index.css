@@ -5,6 +5,14 @@
   margin: 20rpx;
   border-radius: 5rpx;
 }
+.textbreak {
+  width: 245rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 2;
+}
 .container .info {
   background-color: #fb9fc6;
   padding: 100rpx 0;
@@ -54,6 +62,9 @@
 .container .addBook .scan {
   margin: 50rpx 0rpx;
   color: white;
+  padding: 10rpx;
+  border-radius: 5rpx;
+  border: 1px solid white;
 }
 .container .addBook .input {
   background-color: #54d1e3;

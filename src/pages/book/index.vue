@@ -22,6 +22,13 @@ export default {
   components: {
     showBook
   },
+    onPullDownRefresh: function(){
+    wx.stopPullDownRefresh()
+  },
+onPullDownRefresh(){
+console.log('下拉');
+  this.getList()
+},
   methods: {
     async getList() {
       const books = await get("/weapp/booklist");

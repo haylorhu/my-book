@@ -2,6 +2,7 @@
   <div class="rate">
     <span>☆☆☆☆☆</span>
     <div class="hollow" :style="style">★★★★★</div>
+
   </div>
 </template>
 <script>
@@ -15,7 +16,9 @@ export default {
       return `width:${this.value*10}%`;
     }
   },
-  mounted() {}
+  mounted() {
+       
+  }
 };
 </script>
 <style lang='less'>
@@ -24,6 +27,8 @@ export default {
   display: inline-block;
   color: rgb(254, 146, 146);
   left: 0;
+  padding: 0;
+  margin-block-end: 0;
   .hollow {
     position: absolute;
     display: inline-block;

@@ -53,6 +53,7 @@ export default {
 };
 </script>
 <style scoped lang='less'>
+@import '../style/color.less';
 .bg {
   position: relative;
   width: 240rpx;
@@ -92,21 +93,12 @@ export default {
   }
   .title {
     margin: 20rpx 0 10rpx 0;
-    width: 245rpx;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    position: relative;
-    z-index: 2;
+.textbreak()
   }
   .auth {
     color: rgb(146, 145, 145);
-    width: 245rpx;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    position: relative;
-    z-index: 2;
+.textbreak()
+
   }
 }
 </style>

@@ -35,4 +35,6 @@ router.post('/message', controllers.message.post)
 router.post('/addbook', controllers.addbook)
 router.get('/booklist', controllers.booklist)
 router.get('/bookId', controllers.bookId)
+router.post('/addcommint', controllers.addcommint)
+router.get('/getCommitbyBookId', controllers.getCommitbyBookId)
 module.exports = router
